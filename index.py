@@ -1,18 +1,14 @@
 # Variables
-nom = "Dieng" # string
-c = 'D' # string
+# nom = "Dieng" # string
+note = "15"
 age = 25   # number
 taille = 1.99   # float
-complexe = 2 + 3j # complex number
-is_male = True  # boolean
-r = range(5)
 
-# Type de données
-print(type(nom)) # Output: <class'str'>
-print(type(c)) # Output: <class'str'>
-print(type(age)) # Output: <class 'int'>
-print(type(taille)) # Output: <class 'float'>
-print(type(complexe)) # Output: <class 'complex'>
-print(type(is_male)) # Output: <class 'bool'>
+# Convertion
+note_int = int(note)
+age_str = str(age)
+taille_str = str(taille)
 
-print(r)
+print(type(note_int)) # Output: <class 'int'>
+print(type(age_str)) # Output: <class'str'>
+print(type(taille_str)) # Output: <class 'str'>
