@@ -1,11 +1,28 @@
-# La suite de Fibonacci : 0, 1, 1, 2, 3, 5, 8, ...
-# fib(n) = fib(n-1) + fib(n-2), avec fib(0) = 0 et fib(1) = 1
-def fibonacci(n):
-    if n == 0:  # Cas de base
-        return 0
-    elif n == 1:  # Cas de base
-        return 1
-    else:  # Appel récursif
-        return fibonacci(n - 1) + fibonacci(n - 2)
+# # --- Gestion des exceptions de base ---
+# try:
+#     numerateur = int(input("Entrez un numérateur : "))
+#     denominateur = int(input("Entrez un dénominateur : "))
+#     resultat = numerateur / denominateur
+#     print(f"Résultat : {resultat}")
+# except ZeroDivisionError:
+#     print("Erreur : Division par zéro impossible.")
+# except ValueError:
+#     print("Erreur : Vous devez entrer un nombre entier.")
+# except Exception as e:
+#     print(f"Erreur inattendue : {e}")
+# else:
+#     print("La division a été effectuée avec succès.")
+# finally:
+#     print("Fin du programme.")
+#
 
-print("10e nombre de Fibonacci :", fibonacci(10))  # Output: 55
+# --- Lever une exception manuellement ---
+def verifier_age(age):
+    if age < 0:
+        raise ValueError("L'âge ne peut pas être négatif.")
+    print(f"L'âge est : {age}")
+
+try:
+    verifier_age(-5)
+except ValueError as e:
+    print(f"Erreur : {e}")
