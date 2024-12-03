@@ -1,6 +1,13 @@
+# Ceci est un commentaire
+print("Bonjour, le monde !")  # Affiche un message
 
-try:
-    a, b = input("Enter two values separated by a space: ").split(sep=",")
-    print(f"the sum of {a} and {b} is: {int(a) + int(b)}")
-except ValueError:
-    print("Invalid input. Please enter two integers separated by a space.")
+"""
+Ce programme affiche un message
+de bienvenue à l'utilisateur.
+"""
+print("Bienvenue !")
+
+# l'indentation
+if True:
+    print("Ligne avec espaces")
+    print("Ligne avec tabulations")
