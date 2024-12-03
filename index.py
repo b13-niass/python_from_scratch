@@ -1,13 +1,6 @@
-matrice = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-aplatie = [valeur for ligne in matrice for valeur in ligne]
-print(aplatie)  # Output: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# 1. Nested list comprehension
+matrix = [[j for j in range(3)] for _ in range(3)] # Result: [[0, 1, 2], [0, 1, 2], [0, 1, 2]]
 
-# nombres = [1, 2, 3, 4, 5]
-# carrés_pairs = [x ** 2 for x in nombres if x % 2 == 0]
-# print(carrés_pairs)  # Output: [4, 16]
-
-
-# nombres = [1, 5, 3, 4, 10]
-# carrés = [x ** 2 for x in nombres]
-# print(carrés)  # Output: [1, 4, 9, 16, 25]
-
+# 2. Transforming strings
+names = ['alice', 'bob', 'charlie']
+capitalized_names = [name.capitalize() for name in names] # Result: ['Alice', 'Bob', 'Charlie']
