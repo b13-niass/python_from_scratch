@@ -1,6 +1,11 @@
-# Fonction lambda pour ajouter deux nombres
-addition = lambda x, y: x + y
-print("Addition (5 + 3) :", addition(5, 3))  # Output: 8
+# La suite de Fibonacci : 0, 1, 1, 2, 3, 5, 8, ...
+# fib(n) = fib(n-1) + fib(n-2), avec fib(0) = 0 et fib(1) = 1
+def fibonacci(n):
+    if n == 0:  # Cas de base
+        return 0
+    elif n == 1:  # Cas de base
+        return 1
+    else:  # Appel récursif
+        return fibonacci(n - 1) + fibonacci(n - 2)
 
-constante = lambda: 10
-print("Constante: ", constante())
+print("10e nombre de Fibonacci :", fibonacci(10))  # Output: 55
