@@ -1,10 +1,19 @@
-animaux = {"Chat", "Chien", "Oiseau", "Chat"}
-print("\nEnsemble (sans doublons) :", animaux)
+personne = {
+    "nom": "Alice",
+    "age": 25,
+    "ville": "Paris"
+}
 
-animaux.add("Poisson")
-print("Après ajout :", animaux)
+print("\nDictionnaire : ", personne)
+print("Nom :", personne['nom'])
 
-animaux.discard("Chien")
-print("Après suppression :", animaux)
+personne["age"] = 26
+print("Après modification :", personne)
 
-print("Est-ce que 'Chat' est présent ?", "Chat" in animaux)
+personne["profession"] = "Ingénieur"
+print("Après ajout :", personne)
+
+del personne["ville"]
+print("Après suppression :", personne)
+
+print("Est-ce que 'nom' est une clé ?", "nom" in personne)
