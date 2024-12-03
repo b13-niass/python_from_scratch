@@ -1,17 +1,10 @@
-# Opérateurs de comparaison
-x = 5
-y = 10
+# Opérateurs logiques
+vrai = True
+faux = False
 
-egal = x == y            # Égalité : False
-test = 10 * "Cheikh "
-different = x != y       # Différence : True
-plus_grand = x > y       # Supérieur : False
-plus_petit = x < y       # Inférieur : True
-superieur_ou_egal = x >= y  # Supérieur ou égal : False
-inferieur_ou_egal = x <= y  # Inférieur ou égal : True
+et_logique = vrai & faux  # (and ou &) ET logique : False (les deux doivent être True)
+ou_logique = vrai | faux   # (or ou |) OU logique : True (au moins un doit être True)
+non_logique =  not vrai      # NON logique : False (inverse la valeur)
 
-print("\nOpérateurs de comparaison :")
-print(f"Test de conversion d'un entier en string : {test}")
-print(f"Égal : {egal}, Différent : {different}")
-print(f"Supérieur : {plus_grand}, Inférieur : {plus_petit}")
-print(f"Supérieur ou égal : {superieur_ou_egal}, Inférieur ou égal : {inferieur_ou_egal}")
+print("\nOpérateurs logiques :")
+print(f"ET logique : {et_logique}, OU logique : {ou_logique}, NON logique : {non_logique}")
