@@ -1,35 +1,43 @@
-# --- Définir une fonction avec plusieurs paramètres ---
-def addition(a, b):
-    return a + b
-
-# Appeler la fonction avec deux arguments
-resultat = addition(5, 3)
-print("Résultat de l'addition :", resultat)
-
-# --- Définir une fonction avec des valeurs par défaut ---
-def saluer_personnalise(prenom="inconnu", age=0):
-    print(f"Bonjour, {prenom}. Vous avez {age} ans.")
-
-# Appeler sans arguments (utilise les valeurs par défaut)
-saluer_personnalise()
-
-# Appeler avec des arguments
-saluer_personnalise("Bob", 25)
-saluer_personnalise(prenom="Bob", age=25)
-
-# --- Définir une fonction avec un nombre variable d'arguments ---
-def afficher_nombres(*nombres):
-    print("Les nombres sont :", nombres)
-
-# Appeler avec plusieurs arguments
-afficher_nombres(1, 2, 3, 4, 5)
+from typing import Union
 
 
-# --- Définir une fonction avec des arguments nommés ---
-def infos(**details):
-    for cle, valeur in details.items():
-        print(f"{cle} : {valeur}")
+# def saluer(prenom: str) -> str:
+#     return f"Bonjour, {prenom} !"
+#
+# # Appel de la fonction
+# prenom: str = "Alice"
+# message = saluer(prenom)
+# print("Message (str) :", message)
 
-# Appeler avec des arguments nommés
-infos(nom="Alice", age=30, ville="Paris")
+# def infos_utilisateur(nom: str, age: int) -> dict[str, str | int]:
+#     return {"nom": nom, "age": age}
+#
+# # Appel de la fonction
+# utilisateur = infos_utilisateur("Alice", 25)
+# print("Infos utilisateur :", utilisateur)
 
+# def liste_carrés(n: int) -> list[int]:
+#     return [i ** 2 for i in range(n)]
+#
+# # Appel de la fonction
+# print("Liste des carrés :", liste_carrés(5))  # [0, 1, 4, 9, 16]
+
+# def calculer(a: int, b: int, operation: str) -> Union[int, str]:
+#     if operation == "addition":
+#         return a + b
+#     elif operation == "soustraction":
+#         return a - b
+#     else:
+#         return "Opération non reconnue"
+#
+# # Appel de la fonction
+# print(calculer(5, 3, "addition"))       # 8
+# print(calculer(5, 3, "soustraction"))   # 2
+# print(calculer(5, 3, "multiplication")) # "Opération non reconnue"
+#
+#
+# def afficher_message(message: str) -> None:
+#     print(message)
+#
+# # Appel de la fonction
+# afficher_message("Ceci est un message.")
