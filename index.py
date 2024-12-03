@@ -1,14 +1,11 @@
-# Variables
-# nom = "Dieng" # string
-note = "15"
-age = 25   # number
-taille = 1.99   # float
+try:
+ name = input("Enter your name: ")
+ age = float(input("Enter your age: "))
+ if age.is_integer():
+    print("vrai")
+ else:
+    print("faux")
+except ValueError:
+    print("Invalid input. Please enter a valid age.")
 
-# Convertion
-note_int = int(note)
-age_str = str(age)
-taille_str = str(taille)
-
-print(type(note_int)) # Output: <class 'int'>
-print(type(age_str)) # Output: <class'str'>
-print(type(taille_str)) # Output: <class 'str'>
+print(f"Hello, {name}! You are {age} years old.")
