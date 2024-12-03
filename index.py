@@ -1,13 +1,4 @@
-fruits = ["Pomme", "Banane", "Cerise", "Pomme"]
-print("Liste :", fruits)
-
-fruits.append("Orange")
-print("Après ajout :", fruits)
-
-fruits[1] = "Mangue"
-print("Après modification :", fruits)
-
-fruits.remove("Cerise")
-print("Après suppression :", fruits)
-
-print("Premier fruit :", fruits[0])
+couleurs = ("Rouge", "Vert", "Bleu", "Rouge")
+print("\nTuple :", couleurs)
+print("Première couleur :", couleurs[0])
+print("Nombre de couleurs :", len(couleurs))
