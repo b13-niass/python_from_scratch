@@ -1,19 +1,13 @@
-personne = {
-    "nom": "Alice",
-    "age": 25,
-    "ville": "Paris"
-}
+matrice = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+aplatie = [valeur for ligne in matrice for valeur in ligne]
+print(aplatie)  # Output: [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-print("\nDictionnaire : ", personne)
-print("Nom :", personne['nom'])
+# nombres = [1, 2, 3, 4, 5]
+# carrés_pairs = [x ** 2 for x in nombres if x % 2 == 0]
+# print(carrés_pairs)  # Output: [4, 16]
 
-personne["age"] = 26
-print("Après modification :", personne)
 
-personne["profession"] = "Ingénieur"
-print("Après ajout :", personne)
+# nombres = [1, 5, 3, 4, 10]
+# carrés = [x ** 2 for x in nombres]
+# print(carrés)  # Output: [1, 4, 9, 16, 25]
 
-del personne["ville"]
-print("Après suppression :", personne)
-
-print("Est-ce que 'nom' est une clé ?", "nom" in personne)
