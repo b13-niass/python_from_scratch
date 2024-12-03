@@ -1,16 +1,17 @@
-# Opérateurs arithmétiques
-a = 10
-b = 3
+# Opérateurs de comparaison
+x = 5
+y = 10
 
-addition = a + b        # Addition : 10 + 3 = 13
-soustraction = a - b    # Soustraction : 10 - 3 = 7
-multiplication = a * b  # Multiplication : 10 * 3 = 30
-division = a / b        # Division réelle : 10 / 3 = 3.333...
-modulo = a % b          # Modulo (reste) : 10 % 3 = 1
-puissance = a ** b      # Puissance : 10^3 = 1000
-division_entiere = a // b  # Division entière : 10 // 3 = 3
+egal = x == y            # Égalité : False
+test = 10 * "Cheikh "
+different = x != y       # Différence : True
+plus_grand = x > y       # Supérieur : False
+plus_petit = x < y       # Inférieur : True
+superieur_ou_egal = x >= y  # Supérieur ou égal : False
+inferieur_ou_egal = x <= y  # Inférieur ou égal : True
 
-print("Opérateurs arithmétiques :")
-print(f"Addition : {addition}, Soustraction : {soustraction}")
-print(f"Multiplication : {multiplication}, Division : {division}")
-print(f"Modulo : {modulo}, Puissance : {puissance}, Division entière : {division_entiere}")
+print("\nOpérateurs de comparaison :")
+print(f"Test de conversion d'un entier en string : {test}")
+print(f"Égal : {egal}, Différent : {different}")
+print(f"Supérieur : {plus_grand}, Inférieur : {plus_petit}")
+print(f"Supérieur ou égal : {superieur_ou_egal}, Inférieur ou égal : {inferieur_ou_egal}")
