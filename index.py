@@ -1,59 +1,35 @@
-# --- Concaténation ---
-prenom = "Alice"
-salutation = "Bonjour, " + prenom + "!"
-print("Concaténation :", salutation)
+# --- Définir une fonction avec plusieurs paramètres ---
+def addition(a, b):
+    return a + b
 
-# --- Répétition ---
-print("Répétition :", "Python " * 3)
+# Appeler la fonction avec deux arguments
+resultat = addition(5, 3)
+print("Résultat de l'addition :", resultat)
 
-# --- Accès aux caractères ---
-texte = "Bonjour, le monde !"
-premier_caractere = texte[0]  # Premier caractère
-dernier_caractere = texte[-1]  # Dernier caractère
-print("Premier caractère :", premier_caractere)
-print("Dernier caractère :", dernier_caractere)
+# --- Définir une fonction avec des valeurs par défaut ---
+def saluer_personnalise(prenom="inconnu", age=0):
+    print(f"Bonjour, {prenom}. Vous avez {age} ans.")
 
-# --- Slicing (sous-chaînes) ---
-sous_chaine = texte[0:7]  # Du 0e au 6e caractère (exclut l'index 7)
-print("Sous-chaîne :", sous_chaine)
+# Appeler sans arguments (utilise les valeurs par défaut)
+saluer_personnalise()
 
-# --- Méthodes de transformation ---
-print("En majuscules :", texte.upper())
-print("En minuscules :", texte.lower())
-print("Première lettre en majuscule :", texte.capitalize())
-print("Chaque mot avec majuscule :", texte.title())
+# Appeler avec des arguments
+saluer_personnalise("Bob", 25)
+saluer_personnalise(prenom="Bob", age=25)
 
-# --- Suppression des espaces ---
-texte_avec_espaces = "   Python est génial !   "
-print("Sans espaces à gauche et à droite :", texte_avec_espaces.strip())
+# --- Définir une fonction avec un nombre variable d'arguments ---
+def afficher_nombres(*nombres):
+    print("Les nombres sont :", nombres)
 
-# --- Remplacement de mots ---
-nouveau_texte = texte.replace("monde", "univers")
-print("Remplacement :", nouveau_texte)
+# Appeler avec plusieurs arguments
+afficher_nombres(1, 2, 3, 4, 5)
 
-# --- Découpage (split) ---
-mots = texte.split()  # Sépare selon les espaces
-print("Découpage en mots :", mots)
 
-# --- Fusion (join) ---
-phrase = "-".join(mots)  # Fusionne les mots avec "-"
-print("Fusion des mots :", phrase)
+# --- Définir une fonction avec des arguments nommés ---
+def infos(**details):
+    for cle, valeur in details.items():
+        print(f"{cle} : {valeur}")
 
-# --- Recherche dans une chaîne ---
-print("Position de 'monde' :", texte.find("monde"))  # Renvoie l'index ou -1
-print("Existe-t-il 'le' dans le texte ?", "le" in texte)
+# Appeler avec des arguments nommés
+infos(nom="Alice", age=30, ville="Paris")
 
-# --- Validation de contenu ---
-print("Est-ce que tout est en majuscules ?", texte.isupper())
-print("Est-ce que tout est en minuscules ?", texte.islower())
-print("Est-ce que tout est alphanumérique ?", texte.isalnum())  # Pas d'espaces ou de symboles
-
-# --- Longueur de la chaîne ---
-print("Longueur de la chaîne :", len(texte))
-# --- Inverser une chaîne ---
-chaine_inversee = texte[::-1]
-print("Chaîne inversée :", chaine_inversee)
-
-texte = "radar"
-est_palindrome = texte == texte[::-1]
-print(est_palindrome)  # Affiche True
