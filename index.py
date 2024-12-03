@@ -1,11 +1,6 @@
-
-fruits = ["apple", "banana", 10, "date", "elderberry"]
-
-for fruit in fruits:
-    print(fruit)
-
-try:
-    for i in range(0, fruits.__len__(), 2):
-        print(fruits[i])
-except IndexError:
-    print("Error: Index out of range")
+mot_de_passe = "python123"
+saisie = ""
+print("\nVérification du mot de passe :")
+while saisie != mot_de_passe:
+    saisie = input("Entrez le mot de passe : ")
+print("Accès accordé !")
