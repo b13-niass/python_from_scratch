@@ -1,7 +1,5 @@
-from classes.CompteBancaire import CompteBancaire
+from classes.Client import Client
 
-# Utiliser une méthode de classe
-CompteBancaire.changer_taux_interet(0.07)
+client = Client("Bob", "bob@example.com", 12345)
 
-# Utiliser une méthode statique
-CompteBancaire.afficher_bienvenue()
+client.se_connecter()
