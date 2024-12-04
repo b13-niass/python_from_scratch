@@ -1,5 +1,7 @@
-from classes.Voiture import Voiture
+from classes.CompteBancaire import CompteBancaire
 
-voiture1 = Voiture("Toyota", "Corolla", 2020)
-voiture1.demarrer()
-voiture1.demarrer()
+# Utiliser une méthode de classe
+CompteBancaire.changer_taux_interet(0.07)
+
+# Utiliser une méthode statique
+CompteBancaire.afficher_bienvenue()
