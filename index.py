@@ -1,5 +1,14 @@
+from classes.Admin import Admin
 from classes.Client import Client
+from classes.User import User
+def afficher_roles_utilisateurs(utilisateurs):
+    for utilisateur in utilisateurs:
+        print(utilisateur.afficher_role())
+user = User("Alice")
+client = Client("Bob", 12345)
+admin = Admin("Charlie", ["ajouter utilisateur", "supprimer utilisateur"])
 
-client = Client("Bob", "bob@example.com",20000, 12345)
+utilisateurs = [user, client, admin]
 
-client.teste_order() # Celui de User est appelé, puis qu'il est le premier à être hérité
+afficher_roles_utilisateurs(utilisateurs)
+

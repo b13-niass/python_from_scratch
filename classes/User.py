@@ -1,10 +1,5 @@
 class User:
-    def __init__(self, nom, email):
+    def __init__(self, nom):
         self.nom = nom
-        self.email = email
-
-    def afficher_info(self):
-        print(f"Nom : {self.nom}, Email : {self.email}")
-
-    def teste_order(self):
-        print("Je suis un utilisateur")
+    def afficher_role(self):
+        return f"{self.nom} est un utilisateur."

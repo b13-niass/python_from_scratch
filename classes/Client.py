@@ -1,12 +1,7 @@
-from classes.Paiement import Paiement
 from classes.User import User
-class Client(User, Paiement):
-    def __init__(self, nom, email, solde, numero_client):
-        # Appeler les constructeurs des classes parents
-        User.__init__(self, nom, email)
-        Paiement.__init__(self, solde)
+class Client(User):
+    def __init__(self, nom, numero_client):
+        super().__init__(nom)
         self.numero_client = numero_client
-
-    def afficher_info_client(self):
-        self.afficher_info()  # Méthode de Utilisateur
-        print(f"Numéro client : {self.numero_client}, Solde : {self.solde}€")
+    def afficher_role(self):
+        return f"{self.nom} est un client avec le numéro {self.numero_client}."
