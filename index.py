@@ -1,15 +1,19 @@
-from classes.Produit import Produit
+import time
+def mesurer_temps_execution(fonction):
+    def wrapper(*args, **kwargs):
+        debut = time.time()
+        print(args)
+        print(kwargs)
+        resultat = fonction(*args, **kwargs)
+        fin = time.time()
+        print(f"Temps d'exécution de '{fonction.__name__}': {fin - debut:.4f} secondes")
+        return resultat
+    return wrapper
 
-produit1 = Produit("Pommes", 2, 10)
-produit2 = Produit("Pommes", 2, 5)
+@mesurer_temps_execution
+def somme_nombres(n,nom="sss"):
+    time.sleep(1)
+    return sum(range(1, n + 1))
 
-# Utilisation de __str__ et __repr__
-print(produit1)  # Utilise __str__
-print(repr(produit1))  # Utilise __repr__
-
-# Utilisation de __add__
-produit3 = produit1 + produit2
-print(produit3)
-
-# Utilisation de __len__
-print(f"Quantité totale : {len(produit3)}")
+resultat = somme_nombres(1000000, nom="Test")
+print(f"Résultat : {resultat}")
