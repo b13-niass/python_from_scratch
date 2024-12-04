@@ -1,5 +1,5 @@
 from classes.Client import Client
 
-client = Client("Bob", "bob@example.com", 12345)
+client = Client("Bob", "bob@example.com",20000, 12345)
 
-client.se_connecter()
+client.teste_order() # Celui de User est appelé, puis qu'il est le premier à être hérité
