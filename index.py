@@ -1,8 +1,15 @@
-from classes.Cercle import Cercle
-from classes.Rectangle import Rectangle
+from classes.Produit import Produit
 
-rect = Rectangle(5, 3)
-print(f"Rectangle - Aire : {rect.aire()}, Périmètre : {rect.perimetre()}")
+produit1 = Produit("Pommes", 2, 10)
+produit2 = Produit("Pommes", 2, 5)
 
-cercle = Cercle(4)
-print(f"Cercle - Aire : {cercle.aire():.2f}, Périmètre : {cercle.perimetre():.2f}")
+# Utilisation de __str__ et __repr__
+print(produit1)  # Utilise __str__
+print(repr(produit1))  # Utilise __repr__
+
+# Utilisation de __add__
+produit3 = produit1 + produit2
+print(produit3)
+
+# Utilisation de __len__
+print(f"Quantité totale : {len(produit3)}")
